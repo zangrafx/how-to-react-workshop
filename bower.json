@@ -1,0 +1,6 @@
+{
+    "name": "mcharytoniuk-workshop",
+    "dependencies": {
+        "react": "0.x"
+    }
+}
