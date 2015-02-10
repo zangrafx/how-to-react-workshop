@@ -1,0 +1,6 @@
+{
+	"name": "harry-workshop",
+	"dependencies": {
+		"react": "0.x"
+	}
+}
