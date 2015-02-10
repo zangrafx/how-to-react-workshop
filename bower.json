@@ -1,0 +1,19 @@
+{
+  "name": "how-to-react-workshop",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mcharytoniuk/how-to-react-workshop",
+  "authors": [
+    "zangrafx <zangrafx@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "react": "0.x"
+  }
+}

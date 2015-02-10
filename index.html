@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content"></div>
+    <script type="text/jsx;harmony=true">
+        window.addEventListener("resize", function() {
+            if (window.innerWidth < 768) {
+                React.render(<div>Mobile</div>, document.querySelector('.content'));
+            } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+                React.render(<div>Tablet</div>, document.querySelector('.content'));
+            } else if (window.innerWidth >= 1024) {
+                React.render(<div>Desktop</div>, document.querySelector('.content'));
+            } else {
+                React.render(<div>Hard to guess</div>, document.querySelector('.content'));
+            }
+        });
+    </script>
+    <script type="text/javascript" src="/bower_components/react/react-with-addons.min.js"></script>
+    <script type="text/javascript" src="/bower_components/react/JSXTransformer.js"></script>
+
+</body>
+</html>
