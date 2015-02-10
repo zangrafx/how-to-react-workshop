@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="example"></div>
+        <script type="text/jsx">
+			window.addEventListener("resize", function (){
+				if (window.innerWidth < 500)
+				{
+					React.render(<h1>Miejszy</h1>, document.getElementById("example"));
+				}
+				else
+				{
+					React.render(<h1>Większe</h1>, document.getElementById("example"));
+				}
+			});
+        </script>
+
+        <script src="/bower_components/react/react-with-addons.min.js" type="text/javascript"></script>
+        <script src="/bower_components/react/JSXTransformer.js" type="text/javascript"></script>
+    </body>
+</html>

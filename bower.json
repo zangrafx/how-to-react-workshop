@@ -1,0 +1,6 @@
+{
+	"name": "pkruczek-workshop",
+	"dependencies": {
+		"react": "0.x"
+	}
+}
