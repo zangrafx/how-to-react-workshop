@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+		<div id="main"></div>
+		<script type="text/jsx">
+			React.render(<h1>Hello, world!</h1>,document.getElementById("main"));
+		</script>
+		<div id="example"></div>
+		<script type="text/jsx">
+			window.addEventListener("resize",
+				function(){
+					if(window.innerWidth < 500){
+						React.render(<h1>Mniejsze</h1>,document.getElementById("example"))
+					} else{
+						React.render(<h1>Wieksze</h1>,document.getElementById("example"))
+					}
+				}
+			)
+		</script>
+		<script src="/bower_components/react/react-with-addons.min.js"></script>
+		<script src="/bower_components/react/JSXTransformer.js"></script>
+	</body>
+</html>
