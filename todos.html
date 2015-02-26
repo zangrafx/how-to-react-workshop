@@ -35,7 +35,7 @@
         function onSubmit(todoText) {
             todos = todos.concat(todoText);
 
-            console.log(todoText);
+            React.render(<MyList todos={todos} onSubmit={onSubmit} />, document.body);
         }
 
         React.render(<MyList todos={todos} onSubmit={onSubmit} />, document.body);
