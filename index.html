@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
-  </head>
-  <body>
-    <script type="text/jsx">
-    window.addEventListener("resize",
-			    function(){
-				if(window.innerWidth < 500){
-				    React.render(<h1>Hello, world!</h1>,
-						 document.body);
-				} else {
-				    React.render(<h1>Big window hello!</h1>,
-						 document.body);
-				}
-			    });
-    </script>
+    <title>Hello World</title>
     <script src="/bower_components/react/react-with-addons.min.js"></script>
     <script src="/bower_components/react/JSXTransformer.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/jsx" src="tutorial1.jsxo">
+    </script>
   </body>
 </html>
