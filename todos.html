@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <script type="text/jsx;harmony=true">
-            var MyList = React.createClass({
-                "onFormSubmit": function (evt) {
-                    evt.preventDefault();
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content"></div>
+    <script type="text/jsx;harmony=true">
+        var MyList = React.createClass({
+            "onFormSubmit": function (evt) {
+                evt.preventDefault();
 
-                    this.props.onSubmit(this.refs.myinput.getDOMNode().value);
-                },
-                "render": function () {
-                    return <div>
-                        <input ref="myinput" type="text" />
-                        <button onClick={this.onFormSubmit}></button>
+                this.props.onSubmit(this.refs.myinput.getDOMNode().value);
+                this.refs.myinput.getDOMNode().value = "";
+            },
+            "render": function () {
+                return <div>
+                    <input ref="myinput" type="text" />
+                    <button onClick={this.onFormSubmit}>{this.props.children}</button>
 
-                        <ul>
-                            {this.props.todos.map(function (todo) {
-                                return <li>{todo}</li>;
-                            })}
-                        </ul>
-                    </div>;
-                }
-            });
-
-            var todos = [
-                "kupić mleko",
-                "posptrzątać w domu"
-            ];
-
-            function onSubmit(todoText) {
-                todos = todos.concat(todoText);
-
-                console.log(todoText);
+                    <ul>
+                        {this.props.todos.map(function (todo) {
+                            return <li>{todo}</li>;
+                        })}
+                    </ul>
+                </div>;
             }
+        });
 
-            React.render(<MyList todos={todos} onSubmit={onSubmit} />, document.body);
-        </script>
+        var todos = [];
 
-        <script src="/bower_components/react/react-with-addons.js"></script>
-        <script src="/bower_components/react/JSXTransformer.js"></script>
-    </body>
+        function onSubmit(todoText) {
+            todos = todos.concat(todoText);
+
+            React.render(<MyList todos={todos} onSubmit={onSubmit}>Add item</MyList>, document.body);
+        }
+
+        React.render(<MyList todos={todos} onSubmit={onSubmit}>Add first item</MyList>, document.body);
+    </script>
+    <script type="text/javascript" src="/bower_components/react/react-with-addons.min.js"></script>
+    <script type="text/javascript" src="/bower_components/react/JSXTransformer.js"></script>
+
+</body>
 </html>
